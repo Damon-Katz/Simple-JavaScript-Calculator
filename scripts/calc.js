@@ -1,7 +1,3 @@
-console.log(
-  "Javascript Calculator Made by Harsh Trivedi\nhttps://harsh98trivedi.github.io"
-);
-
 let flag = 0;
 
 function isNumber(char) {
@@ -33,7 +29,7 @@ for (item of buttons) {
       }
       screenValue = "";
       screen.value = screenValue;
-      screen.classList.remove("negative"); // Remove negative class
+      screen.classList.remove("negative");
       isSign = true;
     } else if (buttonText == "=") {
       checkForBracketMulti();
@@ -58,7 +54,7 @@ for (item of buttons) {
       }
       screen.value = screenValue;
       isSign = false;
-      screen.classList.remove("negative"); // Remove negative class
+      screen.classList.remove("negative");
     } else {
       if (flag == 1) {
         flag = 0;
@@ -68,27 +64,24 @@ for (item of buttons) {
         screen.value = screenValue;
         isSign = true;
       }
-      screen.classList.remove("negative"); // Remove negative class
+      screen.classList.remove("negative"); 
     }
   });
 }
 
 document.addEventListener("keydown", function (event) {
-  // ... (same code as before)
 });
 
 window.onerror = function () {
   alert("PLEASE INPUT VALID EXPRESSION");
   screenValue = "";
   screen.value = screenValue;
-  screen.classList.remove("negative"); // Remove negative class
+  screen.classList.remove("negative");
   console.clear();
 };
 
-// ... (same code as before)
 
 function checkForBracketMulti() {
-  // ... (same code as before)
 
   if (eval(screenValue) !== undefined) {
     screen.value = eval(screenValue);
@@ -99,7 +92,6 @@ function checkForBracketMulti() {
     } else {
       screen.classList.remove("negative");
     }
-    // ... (same code as before)
   }
   flag = 1;
 }
